@@ -6,6 +6,9 @@ on:
     branches:
       - '*'
   pull_request:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
 jobs:
   libcore:
     name: Native Build (LibCore)
